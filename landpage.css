@@ -1,0 +1,42 @@
+    .navbar-brand {
+        font-family: Proxima Nova;
+    }
+        .blue{
+          background: #51a6dd;
+          height:80vh;
+        }
+        .blueSmall {
+          background: #51a6dd;;
+          height:40vh;
+        }
+        .footer{
+          background-color: #24344e;
+          height: 20vh;
+        }
+        .white {
+          background: white;
+          height: 40vh;
+        }
+        p{
+          font-family:Coves;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+        }
+        .btn-grad {background-image: linear-gradient(to right, #27bcf4 0%,  #008ee6 100%)}
+        .btn-grad:hover { background-position: right center; }
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  height: 100px;
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+}
+.button4 {border-radius: 50px;}
+     
