@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add user - Visual</title>
+    <title>Sign Up Form by Colorlib</title>
+    
+    <script src="js/addEmployee.js"></script>
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+
+
+
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
  <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -21,17 +27,28 @@
  <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
  <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
  <link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css" />
+
+
     <!-- nav bar -->
     
     <div class="dashboard-main-wrapper">
         <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
+    
+
+       
+
     <div class="dashboard-header">
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <a class="navbar-brand" href="dashboard-finance.html"  style="color: #00aeef; font-family:Proxima Nova">Visual Attendance</a>          
-        </nav>      
+            <a class="navbar-brand" href="dashboard-finance.html"  style="color: #00aeef; font-family:Proxima Nova">Visual Attendance</a>
+            
+        </nav>
+        
     </div>
+    
+    
+ 
 </head>
 <body>
     <center>
@@ -39,13 +56,15 @@
     </center>
 <!--     
     FOOOOOOOOOOOOOOOOOOOOOORM -->
-    
     <div class="main">
 
         <section class="signup">
             
-            <div class="container">             
+            <div class="container">
                
+                <div class="signup-content">
+                
+                
                     <form method="POST" id="signup-form" class="signup-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -68,86 +87,68 @@
                                 <label for="gender">Gender</label>
                                 <div class="form-flex">
                                     <input type="radio" name="gender" value="male" id="male" checked="checked" />
-                                    <label for="male">Male</label>   
+                                    <label for="male">Male</label>
+    
                                     <input type="radio" name="gender" value="female" id="female" />
                                     <label for="female">Female</label>
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="phone_number">Phone number</label>
-                            <input type="number" class="form-input" name="phone_number" id="phone_number">           
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" class="form-input" name="password" id="password"/>
-                                </div>         
-                                <div class="form-group">
-                                    <label for="re_password">Repeat your password</label>
-                                    <input type="password" class="form-input" name="re_password" id="re_password"/> 
+                            <input type="number" class="form-input" name="phone_number" id="phone_number" />
                         </div>
-                        
-                        <script type="text/javascript">
-
-                            function changeFunc() {
-                             var selectBox = document.getElementById("selectBox");
-                             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-                             if (selectedValue == 1) {
-                                var arr=["Admin","Student"];
-                             } else {
-                                var arr=["Admin","Teacher","Student"];
-                             }
-
-                             var string="";
-             
-                                 for(i=0;i<arr.length;i++)
-                                    {
-                                string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
-                                    }
-                                document.getElementById("output").innerHTML=string;
-                                     }
-                            
-                         
-                           </script>
-                           
-                        
-                        <div class="form-group">
-                            <label for="country">Establishment</label>
-                            <select id="selectBox"  class = "select-list"onchange="changeFunc();">
-                             <option value="1">Coffee Crate</option>
-                             <option value="2">School</option>
-                            </select>
-                            <!-- <div id="selectBox"class="select-list">
-                                <select name="country" id="country" required>
-                                    <option value="US">School</option>
-                                    <option value="UK">Coffee Crate</option>
-                                </select>
-                            </div> -->
-
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="city">Position</label>
-                            <div class="select-list">
-                                <select id="output" onchange="changeFunc()">
-
-                                </select>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-input" name="password" id="password"/>
                             </div>
+                            <div class="form-group">
+                                <label for="re_password">Repeat your password</label>
+                                <input type="password" class="form-input" name="re_password" id="re_password"/>
+
+                                
+
+                            </div>
+
                         </div>
-                    </div>
-                      
-                                                    
-                      
+                        <script>
+                            <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-input" name="email" id="email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">User Role</label>
+                                    <div class="select-list">
+                                        <select name="role" id="role" required>
+                                            <option value="Employ">Employee</option>
+                                            <option value="Stude">Student</option>                     
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Vocation</label>
+                                    <div class="select-list">
+                                        <select name="city" id="city" required>
+                                            <option value="NY">Book keeping</option>
+                                            <option value="IC">Bartender</option>
+                                            <option value="canada">Household</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                            </script>
+                                
+                        <Center>
+                            <button type="button" onclick="addEmployeeToRecord()" class="btn btn-primary">Upload Image</button>
+                        </Center>
                         
                         <div class="form-group">
-                            <button type="button" class="btn btn-primary">Upload Image</button>
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Submit"/>
                         </div>
                     </form>
-              
-            </div>  
+                </div>
+            </div>
         </section>
 
     </div>
@@ -159,5 +160,6 @@
     <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
+    
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
